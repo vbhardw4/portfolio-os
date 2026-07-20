@@ -84,6 +84,7 @@
     document.querySelectorAll('[data-bind="tagline"]').forEach(el => el.textContent = cfg.tagline);
     document.querySelectorAll('[data-bind="location"]').forEach(el => el.textContent = cfg.location);
     document.querySelectorAll('[data-bind="availability"]').forEach(el => el.textContent = cfg.availability);
+    document.querySelectorAll('[data-bind="quickFacts"]').forEach(el => el.textContent = cfg.quickFacts);
     document.querySelectorAll('[data-bind="email"]').forEach(el => {
       el.textContent = cfg.email;
       if (el.tagName === 'A') el.href = looksLikePlaceholder(cfg.email) ? '#' : `mailto:${cfg.email}`;

@@ -12,6 +12,7 @@ const SITE_CONFIG = {
     "I design and ship production Java/Spring Boot microservices and Kafka-driven event pipelines for capital markets and enterprise platforms — 10+ years backend, currently at Citibank.",
   location: "Toronto, Ontario, Canada",
   availability: "Open to Senior Backend Engineer roles — Java, Spring Boot, Kafka, distributed systems",
+  quickFacts: "2 weeks' notice · Hybrid · No sponsorship/visa required",
 
   email: "vishalbhardwaj630@gmail.com",
   github: "https://github.com/vbhardw4",
