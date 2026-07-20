@@ -43,7 +43,6 @@ const SITE_CONFIG = {
       outcome:
         "Confetti-based gamified rating UX renders at 60fps on mid-range Android — the whole flow from QR tap to posted review runs in under 30 seconds.",
       techStack: ["Node.js", "Express", "PostgreSQL", "Redis", "Cloudflare", "Claude API", "React"],
-      liveUrl: "",
       githubUrl: "https://github.com/vbhardw4/reviewdrop"
     },
     {
@@ -57,7 +56,6 @@ const SITE_CONFIG = {
       outcome:
         "Runs autonomously in production for daily email triage and briefings — no manual intervention required.",
       techStack: ["Hermes Agent", "Claude API", "Google Workspace API", "Telegram Bot API", "Obsidian", "Python"],
-      liveUrl: "",
       githubUrl: "https://github.com/vbhardw4/aria-agentic"
     }
   ],

@@ -71,7 +71,6 @@
         <dt>Outcome</dt><dd>${escapeHtml(p.outcome)}</dd>
       </dl>
       <div class="cta-row">
-        ${linkOrPlaceholder('Live demo ↗', p.liveUrl)}
         ${linkOrPlaceholder('GitHub ↗', p.githubUrl)}
       </div>
     `;
