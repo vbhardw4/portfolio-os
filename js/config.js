@@ -16,7 +16,7 @@ const SITE_CONFIG = {
   email: "vishalbhardwaj630@gmail.com",
   github: "https://github.com/vbhardw4",
   linkedin: "https://www.linkedin.com/in/vishal-bhardwaj630/",
-  resumeUrl: "assets/resume.pdf",
+  resumeUrl: "assets/Vishal_Bhardwaj_Resume.pdf",
 
   bio: [
     "10+ years building backend systems across capital markets, insurance, retail, and telecom — currently a Senior Software Engineer at Citibank designing Spring Boot microservices, gRPC-based event collection, and real-time monitoring platforms for production support teams. Master of Software Engineering, University of Western Ontario.",
