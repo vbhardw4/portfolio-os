@@ -1,0 +1,89 @@
+/* ---------- Design tokens ---------- */
+:root {
+  --desktop-1: #10131c;
+  --desktop-2: #232c42;
+  --dock-bg: #11151f;
+  --dock-border: #2c3450;
+  --paper: #f2efe6;
+  --paper-edge: #cbc3ae;
+  --ink: #14171f;
+  --ink-soft: #52503f;
+  --accent: #ff6b35;
+  --accent-ink: #3a1400;
+  --violet: #7c83fd;
+  --ok: #4caf7d;
+  --icon-label-bg: rgba(17, 21, 31, 0.55);
+
+  /* color-mix() results precomputed as solid fallbacks for browsers
+     without color-mix() support (see base.css @supports block). */
+  --violet-tint-22: #2c3355;
+  --accent-tint-16: #2c2438;
+  --paper-eyebrow: #d9977a;
+  --paper-72: #c9c6bd;
+  /* Text drawn directly on the desktop wallpaper (not inside a paper
+     card) — flips per theme, unlike --paper which stays light/card-colored
+     in both themes. */
+  --desktop-ink: #f2efe6;
+  --ink-92-violet: #262e46;
+  --accent-80-ink: #7a3a20;
+  --paper-10: #262c3c;
+  --ink-8: #23283a;
+
+  color-scheme: dark;
+}
+
+:root[data-theme="light"] {
+  --desktop-1: #eef0f7;
+  --desktop-2: #c7cde6;
+  --dock-bg: #ffffff;
+  --dock-border: #c9cde3;
+  --paper: #fbf9f2;
+  --paper-edge: #d8d0ba;
+  --ink: #191a1f;
+  --ink-soft: #5c5a4c;
+  --accent: #e85d2a;
+  --accent-ink: #fff3ec;
+  --violet: #5c63e0;
+  --icon-label-bg: rgba(255, 255, 255, 0.7);
+
+  --violet-tint-22: #dadcf8;
+  --accent-tint-16: #f9e2d5;
+  --paper-eyebrow: #b04a22;
+  --paper-72: #6b6a63;
+  --desktop-ink: #20212f;
+  --ink-92-violet: #2c2d47;
+  --accent-80-ink: #c74f24;
+  --paper-10: #ececf5;
+  --ink-8: #e8e8ec;
+
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme="dark"]) {
+    --desktop-1: #eef0f7;
+    --desktop-2: #c7cde6;
+    --dock-bg: #ffffff;
+    --dock-border: #c9cde3;
+    --paper: #fbf9f2;
+    --paper-edge: #d8d0ba;
+    --ink: #191a1f;
+    --ink-soft: #5c5a4c;
+    --accent: #e85d2a;
+    --accent-ink: #fff3ec;
+    --violet: #5c63e0;
+    --icon-label-bg: rgba(255, 255, 255, 0.7);
+
+    --violet-tint-22: #dadcf8;
+    --accent-tint-16: #f9e2d5;
+    --paper-eyebrow: #b04a22;
+    --paper-72: #6b6a63;
+    --desktop-ink: #20212f;
+    --ink-92-violet: #2c2d47;
+    --accent-80-ink: #c74f24;
+    --paper-10: #ececf5;
+    --ink-8: #e8e8ec;
+
+    color-scheme: light;
+  }
+}

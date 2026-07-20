@@ -1,0 +1,121 @@
+/* ---------- Mobile / small-viewport experience (<= 680px) ----------
+   Deliberately NOT the OS metaphor: a plain, fast, accessible page. */
+#mobile-experience {
+  background: linear-gradient(180deg, var(--desktop-1), var(--desktop-2) 55%, var(--desktop-1));
+  min-height: 100vh;
+  color: var(--paper);
+}
+
+.m-header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 18px;
+  background: var(--desktop-1);
+  border-bottom: 1px solid var(--dock-border);
+}
+@supports (color: color-mix(in srgb, black, white)) {
+  .m-header { background: color-mix(in srgb, var(--desktop-1) 88%, transparent); backdrop-filter: blur(8px); }
+}
+.m-header strong { font-size: 0.95rem; }
+.m-theme-toggle {
+  border: 1px solid var(--dock-border);
+  background: transparent;
+  color: var(--paper);
+  border-radius: 999px;
+  padding: 6px 12px;
+  font-size: 0.78rem;
+  cursor: pointer;
+}
+
+.m-main { padding: 28px 20px 60px; max-width: 640px; margin: 0 auto; }
+
+.m-hero { padding: 20px 0 30px; }
+.m-hero .eyebrow {
+  display: block;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--paper-eyebrow);
+  margin-bottom: 10px;
+}
+.m-hero h1 {
+  margin: 0 0 10px;
+  font-size: clamp(1.5rem, 7vw, 2rem);
+  line-height: 1.2;
+  text-wrap: balance;
+}
+.m-hero p { margin: 0 0 18px; color: var(--paper-72); line-height: 1.55; font-size: 0.97rem; }
+
+section.m-section {
+  background: var(--paper);
+  color: var(--ink);
+  border-radius: 16px;
+  padding: 22px 20px;
+  margin-bottom: 20px;
+  border: 1px solid var(--paper-edge);
+}
+section.m-section h2 {
+  margin: 0 0 14px;
+  font-size: 1.15rem;
+}
+
+.m-proj-card {
+  border-top: 1px solid var(--paper-edge);
+  padding-top: 16px;
+  margin-top: 16px;
+}
+.m-proj-card:first-child { border-top: none; padding-top: 0; margin-top: 0; }
+.m-proj-card h3 { margin: 0 0 8px; font-size: 1.02rem; }
+
+.m-job-card {
+  border-top: 1px solid var(--paper-edge);
+  padding-top: 16px;
+  margin-top: 16px;
+}
+.m-job-card:first-child { border-top: none; padding-top: 0; margin-top: 0; }
+.m-job-card h3 { margin: 0 0 6px; font-size: 1.02rem; }
+.m-job-card .tag {
+  display: inline-block;
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--ink-soft);
+  margin-bottom: 10px;
+}
+.m-job-card ul, .m-job-card .certs ul { margin: 8px 0; padding-left: 20px; }
+.m-job-card li { margin-bottom: 6px; }
+.m-job-card.edu-group h3 { font-size: 1.05rem; }
+.m-job-card .edu { margin-top: 12px; }
+.m-job-card .edu:first-of-type { margin-top: 0; }
+
+.m-skill-row { display: flex; justify-content: space-between; font-size: 0.85rem; margin: 10px 0 4px; }
+.m-skill-bar { height: 8px; border-radius: 4px; background: var(--paper-edge); overflow: hidden; margin-bottom: 10px; }
+.m-skill-bar > span { display: block; height: 100%; background: linear-gradient(90deg, var(--violet), var(--accent)); }
+
+.m-contact-links { display: flex; flex-direction: column; gap: 10px; margin-top: 12px; }
+.m-contact-links a {
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.92rem;
+  padding: 12px 14px;
+  border-radius: 10px;
+  background: var(--ink-8);
+  color: var(--ink);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@supports (color: color-mix(in srgb, black, white)) {
+  .m-contact-links a { background: color-mix(in srgb, var(--ink) 6%, transparent); }
+}
+
+.m-footer {
+  text-align: center;
+  font-size: 0.76rem;
+  color: var(--paper-72);
+  padding: 20px;
+}

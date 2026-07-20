@@ -1,0 +1,152 @@
+/* ---------- Reset & shared primitives ---------- */
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+  margin: 0;
+  font-family: ui-sans-serif, "Segoe UI", Helvetica, Arial, sans-serif;
+  color: var(--ink);
+}
+img { max-width: 100%; display: block; }
+a { color: inherit; }
+
+.chrome-font {
+  font-family: ui-monospace, "SF Mono", "JetBrains Mono", "Cascadia Mono", monospace;
+  letter-spacing: 0.02em;
+}
+
+/* Visually hidden but available to assistive tech */
+.visually-hidden {
+  position: absolute !important;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Skip link — accessibility escape hatch, also doubles as the
+   "skip the desktop, view plain version" safety net */
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 12px;
+  z-index: 300;
+  background: var(--accent);
+  color: var(--accent-ink);
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: top 0.15s ease;
+}
+.skip-link:focus {
+  top: 12px;
+}
+
+/* Consistent focus ring everywhere */
+:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* Tech-stack chips, shared by desktop + mobile project cards */
+.tech-chip-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 8px 0 10px;
+}
+.tech-chip {
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 3px 9px;
+  border-radius: 999px;
+  background: var(--violet-tint-22);
+  color: var(--violet);
+  border: 1px solid var(--violet);
+}
+@supports (color: color-mix(in srgb, black, white)) {
+  .tech-chip {
+    background: color-mix(in srgb, var(--violet) 16%, transparent);
+    border-color: color-mix(in srgb, var(--violet) 55%, transparent);
+  }
+}
+
+/* Case-study fields (problem / role / approach / outcome) */
+.case-study dt {
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--ink-soft);
+  margin-top: 10px;
+}
+.case-study dt:first-child { margin-top: 0; }
+.case-study dd {
+  margin: 2px 0 0;
+  line-height: 1.5;
+}
+
+.cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.85rem;
+  padding: 10px 16px;
+  border-radius: 10px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  font-family: inherit;
+}
+.cta.primary { background: var(--accent); color: var(--accent-ink); }
+.cta.secondary {
+  background: var(--ink-8);
+  color: var(--ink);
+  border-color: var(--paper-edge);
+}
+@supports (color: color-mix(in srgb, black, white)) {
+  .cta.secondary { background: color-mix(in srgb, var(--ink) 8%, transparent); }
+}
+.cta[aria-disabled="true"] {
+  opacity: 0.5;
+  pointer-events: none;
+}
+.cta-row { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 14px; }
+
+.placeholder-flag {
+  display: inline-block;
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--accent);
+  border: 1px dashed var(--accent);
+  border-radius: 6px;
+  padding: 1px 6px;
+  margin-left: 6px;
+}
+
+/* ---------- Experience switch: desktop OS vs. plain mobile page ---------- */
+/* Single breakpoint, matched by js/app.js's matchMedia query. Below it we
+   deliberately do NOT ship the window-manager/game metaphor at all — just
+   a fast, plain, responsive page. */
+#mobile-experience { display: none; }
+@media (max-width: 680px) {
+  #desktop-experience { display: none; }
+  #mobile-experience { display: block; }
+}
+/* "Plain text view" escape hatch — lets a desktop-width visitor opt out
+   of the OS metaphor entirely, e.g. for screen-reader/keyboard use. */
+body.force-plain-view #desktop-experience { display: none; }
+body.force-plain-view #mobile-experience { display: block; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}

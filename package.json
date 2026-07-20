@@ -1,0 +1,13 @@
+{
+  "name": "portfolio-os",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Recruiter-facing developer portfolio: OS-themed desktop experience (>=681px) plus a plain, fast, accessible mobile page.",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "engines": {
+    "node": ">=14"
+  }
+}
