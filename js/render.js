@@ -29,6 +29,10 @@
       <div class="job">
         <h3>${escapeHtml(job.title)} — ${escapeHtml(job.company)}</h3>
         <div class="tag">${escapeHtml(job.dates)}</div>
+        ${(job.techStack && job.techStack.length) ? `
+        <div class="tech-chip-row">
+          ${job.techStack.map(t => `<span class="tech-chip">${escapeHtml(t)}</span>`).join('')}
+        </div>` : ''}
         <ul>
           ${(job.highlights || []).map(h => `<li>${escapeHtml(h)}</li>`).join('')}
         </ul>

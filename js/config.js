@@ -66,6 +66,7 @@ const SITE_CONFIG = {
       company: "Citibank",
       title: "Senior Software Engineer",
       dates: "Sep 2023 – Present",
+      techStack: ["Java", "Spring Boot", "gRPC", "Kafka", "MongoDB", "Elasticsearch/ELK"],
       highlights: [
         "Designed and led a production monitoring service consolidating business process health (PNL workflow status, intraday recon breaks, position breaks, NPV/PV breaks, Flash PNL, EOD reconciliation) into a real-time ITRS dashboard.",
         "Architected gRPC-based event collection from 10+ downstream microservices with direct ELK Stack/Elasticsearch integration.",
@@ -80,6 +81,7 @@ const SITE_CONFIG = {
       company: "Loblaws Companies Limited",
       title: "Senior Software Engineer",
       dates: "Mar 2022 – Sep 2023",
+      techStack: ["GCP", "GKE", "BigQuery", "Cloud Composer", "Pub/Sub", "React"],
       highlights: [
         "Deployed cloud-native ETL pipelines on GCP (GKE, BigQuery, Cloud Composer, Apache Airflow, Cloud Storage); owned pipeline deployments and orchestration at enterprise scale.",
         "Built a Pub/Sub event-driven architecture with Cloud Functions; integrated Datastore as a NoSQL backend for analytics.",
@@ -90,6 +92,7 @@ const SITE_CONFIG = {
       company: "Canada Life",
       title: "Senior Software Developer",
       dates: "Jul 2020 – Mar 2022",
+      techStack: ["Java", "Spring/Hybris", "Kafka", "Hibernate", "Vue.js", "Angular"],
       highlights: [
         "Delivered core modules across Policy Management, Profile Management, and Claims Processing on a Spring/Hybris Java platform.",
         "Integrated Kafka with Kerberos auth for secure underwriting data ingestion; used Hibernate for ORM and transaction integrity.",
@@ -101,6 +104,7 @@ const SITE_CONFIG = {
       company: "Amdocs Development Center India",
       title: "Software Developer",
       dates: "Jul 2016 – Jul 2019",
+      techStack: ["Spring Boot", "Kafka", "Zookeeper", "Couchbase", "React-Redux"],
       highlights: [
         "Built Order Management and CPQ features (Spring Boot, Kafka, Zookeeper, Couchbase, React-Redux) with 90%+ JUnit coverage.",
         "Reduced system response time by 40% through targeted API call elimination and refactoring.",
